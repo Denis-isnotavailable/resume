@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import Bounded from '../Bounded/Bounded';
+import { Shapes } from './Shapes';
 
 const NAME = 'Denis';
 const LASTNAME = 'Slivinskyi';
@@ -23,7 +24,7 @@ export const Hero = () => {
                         opacity: 1,
                         rotate: 0,
 
-                        ease: "elastic.out(1,0.3)",
+                        ease: "bounce.out",
                         duration: 1,
                         transformOrigin: "left top",
                         stagger: { each: 0.1, from: "random" }
@@ -37,7 +38,7 @@ export const Hero = () => {
                         y: 0,
                         duration: 1,
                         scale: 1,
-                        ease: "elastic.out(1,0.3)"
+                        ease: "bounce.out"
                     }
                 )
         }, component);
@@ -58,6 +59,8 @@ export const Hero = () => {
     return (
         <Bounded ref={component}>
             <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2">
+
+                <Shapes />
                 
                 <div className="col-start-1 md:row-start-1 " data-speed=".2">
                     <h1
