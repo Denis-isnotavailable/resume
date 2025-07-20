@@ -1,6 +1,5 @@
 'use client';
 
-import Bounded from "@/components/Bounded/Bounded";
 import { Heading } from "@/components/Heading/Heading";
 import React, { useLayoutEffect, useRef } from "react";
 import { MdCircle } from "react-icons/md";
@@ -60,11 +59,11 @@ export const Skills = () => {
             ref={component}
             className="wrapper overflow-hidden"
         >
-            <Bounded as='div'>
+            <div className={"mx-auto w-full max-w-7xl"}>
                 <Heading size="lg" as='h2' className="mb-8">
                     {SKILLS_HEADING}
                 </Heading>
-            </Bounded>
+            </div>
             
 
             <ul>
