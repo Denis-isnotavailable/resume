@@ -21,11 +21,10 @@ export const Skills = () => {
     const component = useRef(null);
 
     useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            // create as many GSAP animations and/or ScrollTriggers here as you want...
+        const ctx = gsap.context(() => {            
             const tl = gsap.timeline({
                 scrollTrigger: {
-                    pin: true, // pin the trigger element while active
+                    pin: true,
                     start: "top bottom",
                     end: "bottom top",
                     scrub: 4,
@@ -76,18 +75,12 @@ export const Skills = () => {
                         {Array.from({ length: 15 }, (_, index) => (
                             <React.Fragment key={index}>
                                 <span
-                                    className={
-                                        "tech-item text-8xl font-extrabold uppercase tracking-tighter"
-                                    }
-                                    style={{
-                                        color: index === 7 && color ? color : "inherit",
-                                    }}
+                                    className={ "tech-item text-8xl font-extrabold uppercase tracking-tighter" }
+                                    style={{ color: index === 7 && color ? color : "inherit", }}
                                 >
                                     {name}
                                 </span>
-                                <span className="text-3xl">
-                                    <MdCircle />
-                                </span>
+                                <span className="text-3xl"><MdCircle /></span>
                             </React.Fragment>
                         ))}
                     </li>)}

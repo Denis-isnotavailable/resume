@@ -1,10 +1,20 @@
 import Bounded from '@/components/Bounded/Bounded';
-import React from 'react'
+import { Heading } from '@/components/Heading/Heading';
+import { ProjectsList } from './ProjectsList';
+
+const PAGE_TITLE = 'Projects';
+const PAGE_DESCRIPTION = 'Some of my projects:';
 
 export const ProjectsPage = () => {
     return (
         <Bounded>
-            <div>Projects Page</div>
+            <Heading size="xl" className="mb-8">
+                {PAGE_TITLE}
+            </Heading>
+
+            <p className="mb-10">{PAGE_DESCRIPTION}</p>
+
+            <ProjectsList />
         </Bounded>
     );
 }
