@@ -5,13 +5,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 type PageProps = {
-    params: {
-        id: string;
-    };
+    params: Promise<{ id: string }>;
 };
 
 export default async function ProjectPage({ params }: PageProps) {
-    const id = params.id;
+    const { id } = await params;
   
     const project = PROJECTS.find((project) => project.id === Number(id));
     if (!project) return notFound();
