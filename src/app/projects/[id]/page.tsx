@@ -4,13 +4,13 @@ import { PROJECTS } from '@/utils/projects';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-type Props = {
+type PageProps = {
     params: {
         id: string;
     };
 };
 
-export default async function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params }: PageProps) {
     const id = params.id;
   
     const project = PROJECTS.find((project) => project.id === Number(id));
