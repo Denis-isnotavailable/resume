@@ -6,7 +6,7 @@ import { MdCircle } from "react-icons/md";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const SKILLS_HEADING = 'POWER SKILLS';
+const SKILLS_HEADING = 'Power Skills';
 const SKILLS = [
     { id: '1', name: 'Next.js', color: '#3B82F6' },
     { id: '2', name: 'Node.js', color: '#10B981' },
@@ -58,12 +58,11 @@ export const Skills = () => {
             ref={component}
             className="wrapper overflow-hidden"
         >
-            <div className={"mx-auto w-full max-w-7xl"}>
-                <Heading size="lg" as='h2' className="mb-8">
+            <div className={"px-4 py-10 md:px-6 md:py-14 lg:py-16 mx-auto w-full max-w-7xl"}>
+                <Heading size="lg" as='h2'>
                     {SKILLS_HEADING}
                 </Heading>
-            </div>
-            
+            </div>            
 
             <ul>
                 {SKILLS.map(({ id, name, color }) =>

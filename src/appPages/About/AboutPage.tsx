@@ -16,7 +16,7 @@ export const AboutPage = () => {
                         {`${NAME} ${LASTNAME}`}
                     </Heading>
 
-                    <p>
+                    <p className="ml-6 max-w-prose">
                         I am a full-stack developer skilled in building and maintaining complex web applications using modern
                         technologies like React, Next.js, TypeScript, and Node.js. Demonstrated ability to lead projects from
                         concept to deployment, focusing on enhancing user experience and optimizing performance. Passionate

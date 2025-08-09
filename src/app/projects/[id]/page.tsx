@@ -35,13 +35,14 @@ export default async function ProjectPage({ params }: PageProps) {
                 {allTechnologies}
             </p>
 
-            <div className="mb-10 text-lg font-bold border-b border-b-slate-100 flex justify-between">
+            <div className="mb-10 text-lg font-bold border-b border-b-slate-100 md:flex md:justify-between">
                 <p>{date}</p>
                 <Link
                     href={project_live_link}
                     aria-label={name || ""}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="break-words"
                 >
                     {project_live_link}
                 </Link>
